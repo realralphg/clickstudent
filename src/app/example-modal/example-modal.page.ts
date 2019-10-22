@@ -19,7 +19,7 @@ export class ExampleModalPage implements OnInit {
     private navParams: NavParams,
     public http: HttpClient,
     public alertController: AlertController
-    ) { }
+    ) {  }
 
     ngOnInit() {
       this.clear();
