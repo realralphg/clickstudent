@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      ClickOnStudents
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+      <ion-button expand="block" (click)="openModal()">Add Student</ion-button>
+ 
+      <!-- List of Text Items -->
+  
+  <ion-list>
+
+    <ion-item color= "primary">
+        <ion-label> Name </ion-label>
+        <ion-label> Stream </ion-label>
+        <ion-label> Gender </ion-label>
+        <ion-label> About </ion-label>
+        <ion-label> Action </ion-label>
+    </ion-item>
+
+    <ion-item *ngFor="let student of students">
+      <ion-label>{{ student.name }}</ion-label>
+      <ion-label>{{ student.stream }}</ion-label>
+      <ion-label>{{ student.gender }}</ion-label>
+      <ion-label>{{ student.about }}</ion-label>
+      <ion-label>
+        <ion-button (click)="edit(student.id)">Edit</ion-button>
+        <ion-button (click)="delete(student.id)" color=danger>Delete</ion-button>
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+
+  </div>
+</ion-content>
+
